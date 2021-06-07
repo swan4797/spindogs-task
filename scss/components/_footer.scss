@@ -1,0 +1,154 @@
+.footer {
+  width: 100vw;
+  background-color: $purple;
+  padding-top: 3em;
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 2em;
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .socials {
+      padding: 3em 0;
+      a {
+        font-size: 1rem;
+        color: #fff;
+        &:not(:last-child) {
+          margin-right: 0.75em;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .links {
+      h1 {
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        @include breakpoint(mobile) {
+          font-size: 0.75rem;
+        }
+      }
+
+      ul {
+        li {
+          line-height: 1.65em;
+          color: #fff;
+          font-size: 0.95rem;
+          @include breakpoint(mobile) {
+            font-size: 0.65rem;
+          }
+
+          &:not(:last-child) {
+            margin-right: 1em;
+          }
+        }
+      }
+    }
+  }
+
+  &__newsletter {
+    @include breakpoint(mobile) {
+      margin-bottom: 2em;
+    }
+    .form {
+      &__title {
+        font-size: 1rem;
+        color: #fff;
+        margin: 0;
+      }
+
+      &__body {
+        padding: 1rem 0;
+
+        .row {
+          display: flex;
+          padding: 0.75em 0;
+
+          .foot-col {
+            label {
+              color: #fff;
+              font-size: 1em;
+              font-weight: bold;
+            }
+            &:first-child {
+              margin-right: 1em;
+            }
+          }
+
+          input[type="text"] {
+            appearance: none;
+            width: 100%;
+            margin: 0;
+            height: 35px;
+            padding: 5px 15px;
+            border-radius: 5px;
+            outline: none;
+            border: solid 0.12em#fff;
+            background: transparent;
+            color: #576366;
+            font-size: 14px;
+          }
+        }
+
+        .email {
+          display: block;
+
+          label {
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+          }
+
+          input[type="text"] {
+            appearance: none;
+            width: 100%;
+            margin: 0;
+            height: 35px;
+            padding: 5px 15px;
+            border-radius: 5px;
+            outline: none;
+            border: solid 0.12em#fff;
+            background: transparent;
+            color: #576366;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    background-color: rgb(31, 4, 39);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5em;
+
+    h3 {
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 200;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}

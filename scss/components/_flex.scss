@@ -1,0 +1,61 @@
+@import "mixins";
+@import "buttons";
+
+.flex {
+  margin: 4em 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 11em;
+    overflow: hidden;
+
+    @include breakpoint(mobile) {
+      padding: 0 1em;
+    }
+  }
+
+  &__duo {
+    display: flex;
+    justify-content: center;
+
+    &:first-child {
+      margin-bottom: 2em;
+    }
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      padding: 0;
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+
+  &__image {
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+    width: 30rem;
+    height: 20rem;
+  }
+
+  &__text {
+    @include breakpoint(mobile) {
+      padding: 0;
+      margin-bottom: 0.75em;
+    }
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+
+    h3 {
+      margin: 0;
+      @include breakpoint(mobile) {
+        margin-top: 0.75em;
+      }
+    }
+  }
+}

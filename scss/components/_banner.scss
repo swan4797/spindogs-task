@@ -1,0 +1,29 @@
+.banner {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    background-color: $purple;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em 5em;
+    @include breakpoint(mobile) {
+      padding: 2em 4em;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    h1 {
+      color: #ffffff;
+    }
+
+    p {
+      color: #ffffff;
+    }
+  }
+}

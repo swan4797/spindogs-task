@@ -1,0 +1,69 @@
+.primary-btn {
+  border: solid 0.05em $pink;
+  border-radius: 5px;
+  padding: 0.55em 0;
+  background-color: $pink;
+  font-size: 0.75em;
+  color: #fff;
+  display: inline-block;
+  width: 10em;
+  cursor: pointer;
+  text-transform: capitalize;
+  position: relative;
+
+  &::after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 7px;
+    right: -40px;
+    transition: 0.5s;
+    color: $pink;
+  }
+
+  &:hover {
+    background: transparent;
+    color: $pink;
+    border: solid 0.05em $pink;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    right: 10px;
+  }
+}
+
+.secondary-btn {
+  border: solid 0.2em $pink;
+  border-radius: 5px;
+  padding: 0.55em 0;
+  background-color: transparent;
+  font-size: 0.75em;
+  color: #000000;
+  display: inline-block;
+  width: 10em;
+  cursor: pointer;
+  text-transform: capitalize;
+  position: relative;
+
+  &::after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 6px;
+    right: -20px;
+    transition: 0.5s;
+    color: #fff;
+  }
+
+  &:hover {
+    background: $pink;
+    color: #fff;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    right: 10px;
+    color: #fff;
+  }
+}
